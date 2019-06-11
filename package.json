@@ -1,13 +1,13 @@
 {
-  "name": "some-components",
+  "name": "z-components",
   "version": "1.0.0",
   "description": "Some UI Components for Vue.js.",
   "author": "zhowiny",
   "license": "MIT",
-  "private": true,
-  "main": "lib/some-components.common.js",
-  "module": "lib/some-components.esm.js",
-  "browser": "lib/some-components.js",
+  "publish": true,
+  "main": "lib/z-components.common.js",
+  "module": "lib/z-components.esm.js",
+  "browser": "lib/z-components.js",
   "scripts": {
     "dev": "webpack-dev-server --host 0.0.0.0 --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zhowiny/some-components.git"
+    "url": "https://github.com/zhowiny/z-components.git"
   },
   "keywords": [
     "vue-component",

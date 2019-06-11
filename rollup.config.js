@@ -15,7 +15,7 @@ const banner = createBanner({
   data,
 })
 const globals = {
-  'some-components': 'some-components',
+  'z-components': 'z-components',
   vue: 'Vue',
 }
 
@@ -51,7 +51,7 @@ export default {
       format: 'esm',
     },
   ],
-  external: ['vue', 'some-components'],
+  external: ['vue', 'z-components'],
   plugins: [
     nodeResolve(),
     commonjs(),
