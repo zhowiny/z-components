@@ -1,0 +1,43 @@
+@charset "UTF-8";
+//布局区块
+$min-width: 960px;
+$defined-box-type : border-box !default;
+$small-space: 10px;
+$middle-space: $small-space * 2;
+$big-space: $middle-space * 2;
+//==================================================
+//文字大小
+//==================================================
+$htmlsize: 28px;
+//==================================================
+//颜色区块
+//==================================================
+//背景
+$mainColor: #306FF4; //主色
+$backgroundColor: #f5f5f5;
+$borderColor: #eee;
+$deepColor: #333; //深色
+$lightColor:#999999; //浅色
+$gray: gray; //灰色
+$contentcolor:#FFF;
+$fontSizeColor: #555;
+//==================================================
+//文字阴影
+//==================================================
+$default-text-shadow-color: darken($gray,20%);
+$default-text-shadow-blur: 3px;
+$default-text-shadow-v-offset: 0;
+$default-text-shadow-h-offset: 0;
+//==================================================
+//盒子阴影
+//==================================================
+$default-box-shadow-color: darken($gray,20%);
+$default-box-shadow-h-offset: 0px;
+$default-box-shadow-v-offset: 2px;
+$default-box-shadow-blur: 2px;
+$default-box-shadow-spread: false;
+$default-box-shadow-inset: false;
+//==================================================
+//圆角大小
+//==================================================
+$default-border-radius: 8px;
