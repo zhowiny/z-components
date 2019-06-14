@@ -10,9 +10,10 @@ const components = {
   zMask,
 }
 const install = function(Vue, opts = {}) {
-  Object.keys(components).forEach(c => {
-    Vue.component(c.name, components[c])
+  Object.values(components).forEach(c => {
+    Vue.component(c.name, c)
   })
+  window.zComponents = zComponents
 }
 
 const zComponents = {
@@ -20,4 +21,8 @@ const zComponents = {
   ...components,
 }
 
-module.exports.default = module.exports = zComponents
+if (typeof window !== 'undefined' && window.Vue) {
+  window.Vue.use(zComponents)
+}
+
+export default zComponents
