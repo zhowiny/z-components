@@ -11,7 +11,7 @@
       <div class="z-dialog_footer">
         <slot name="footer">
           <z-button type="primary">确定</z-button>
-          <z-button>取消</z-button>
+          <z-button @cick="cancel">取消</z-button>
         </slot>
       </div>
     </div>
@@ -60,6 +60,14 @@ export default {
     close () {
       this.showDialog = false
     },
+    cancel (e) {
+      this.close()
+      this.$emit('cancel', e)
+    },
+    confirm (e) {
+      this.close()
+      this.$emit('confirm', e)
+    },
   },
   components: {
     zIcon,
@@ -74,7 +82,7 @@ export default {
   .z-dialog {
     @include center();
     top: 45%;
-    min-width: 40%;
+    min-width: 30%;
     min-height: 100px;
     max-width: 80%;
     max-height: 80%;

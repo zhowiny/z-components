@@ -2,7 +2,7 @@
   <div id="app">
     <img src="./assets/logo.png" @click="showModal = true">
     <div style="width: 300px; height:300px; position: relative;">
-      <z-dialog fixed v-model="showModal" class="dialog">
+      <z-dialog fixed v-model="showModal" :mask-close="false" class="dialog">
         <ul v-for="(property, key) in ['', 'plain', 'round', 'disabled']" :key="key">
           <li v-for="(size, index) in ['default', 'medium', 'small', 'mini']" :key="index">
             <z-button

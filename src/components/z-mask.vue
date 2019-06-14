@@ -1,5 +1,7 @@
 <template>
-  <div class="z-mask" :class="{ show }" :style="{position: fixed ? 'fixed' : 'absolute'}" @click.self="maskClick">
+  <div class="z-mask" :class="{ show }" :style="{position: fixed ? 'fixed' : 'absolute'}">
+    <div class="z-mask--container" :style="{position: fixed ? 'fixed' : 'absolute'}" @click.self="maskClick">
+    </div>
     <slot></slot>
   </div>
 </template>
@@ -49,15 +51,19 @@ export default {
   @import "../style/config";
   .z-mask {
     @include size(100%);
-    @include center();
-    min-width: $min-width;
-    background: rgba(#000, .4);
+    top: 0;
+    left: 0;
     transition: all .3s;
-    opacity: 0;
     visibility: hidden;
+    opacity: 0;
     &.show {
-      opacity: 1;
       visibility: visible;
+      opacity: 1;
+    }
+    &--container {
+      @include size(100%);
+      @include center();
+      background: rgba(#000, .4);
     }
   }
 </style>
