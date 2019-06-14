@@ -19,9 +19,9 @@
 </template>
 
 <script>
-import zIcon from './z-icon'
-import zMask from './z-mask'
-import zButton from './z-button'
+import zIcon from './z-icon.vue'
+import zMask from './z-mask.vue'
+import zButton from './z-button.vue'
 
 export default {
   name: 'z-dialog',

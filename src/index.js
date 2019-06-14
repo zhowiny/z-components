@@ -16,7 +16,6 @@ const install = function(Vue, opts = {}) {
 }
 
 const zComponents = {
-  version: process.env.VERSION,
   install,
   ...components,
 }
