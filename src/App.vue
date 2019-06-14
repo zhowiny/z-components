@@ -2,26 +2,26 @@
   <div id="app">
     <img src="./assets/logo.png" @click="showModal = true">
     <div style="width: 300px; height:300px; position: relative;">
-      <c-dialog fixed v-model="showModal" class="dialog">
+      <z-dialog fixed v-model="showModal" class="dialog">
         <ul v-for="(property, key) in ['', 'plain', 'round', 'disabled']" :key="key">
           <li v-for="(size, index) in ['default', 'medium', 'small', 'mini']" :key="index">
-            <c-button
+            <z-button
               v-for="(color, i) in colors"
               :type="color" :size="size" :key="i"
               :plain="property === 'plain'"
               :round="property === 'round'"
               :disabled="property === 'disabled'"
-            >{{ size }}</c-button>
+            >{{ size }}</z-button>
           </li>
         </ul>
-      </c-dialog>
+      </z-dialog>
     </div>
   </div>
 </template>
 
 <script>
-import cDialog from './components/c-dialog'
-import cButton from './components/c-button'
+import zDialog from './components/z-dialog'
+import zButton from './components/z-button'
 
 export default {
   name: 'App',
@@ -32,8 +32,8 @@ export default {
     }
   },
   components: {
-    cDialog,
-    cButton,
+    zDialog,
+    zButton,
   }
 }
 </script>

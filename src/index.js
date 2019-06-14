@@ -1,18 +1,24 @@
-import button from './components/c-button'
-import dialog from './components/c-dialog'
-import icon from './components/c-icon'
-import mask from './components/c-mask'
-
-const install = function(Vue, opts = {}) {
-}
+import zButton from './components/z-button.vue'
+import zDialog from './components/z-dialog.vue'
+import zIcon from './components/z-icon.vue'
+import zMask from './components/z-mask.vue'
 
 const components = {
-  version: process.env.VERSION,
-  button,
-  dialog,
-  icon,
-  mask,
-  install,
+  zButton,
+  zDialog,
+  zIcon,
+  zMask,
+}
+const install = function(Vue, opts = {}) {
+  Object.keys(components).forEach(c => {
+    Vue.component(c.name, components[c])
+  })
 }
 
-module.exports.default = module.exports = components
+const zComponents = {
+  version: process.env.VERSION,
+  install,
+  ...components,
+}
+
+module.exports.default = module.exports = zComponents

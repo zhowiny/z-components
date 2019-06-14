@@ -1,6 +1,6 @@
 <template>
   <button
-    class="c-button"
+    class="z-button"
     :disabled="disabled"
     :class="[
       `button--${type}`,
@@ -18,7 +18,7 @@
 </template>
 <script>
 export default {
-  name: 'c-button',
+  name: 'z-button',
   props: {
     type: {
       type: String,
@@ -76,7 +76,7 @@ export default {
       @include is-disabled($color);
     }
   }
-  .c-button {
+  .z-button {
     border: 1px solid #dcdfe6;
     width: 100%;
     max-height: 100px;

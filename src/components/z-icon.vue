@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'c-icon',
+  name: 'z-icon',
   props: {
     name: {
       type: String,

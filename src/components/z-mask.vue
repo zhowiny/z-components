@@ -1,12 +1,12 @@
 <template>
-  <div class="c-mask" :class="{ show }" :style="{position: fixed ? 'fixed' : 'absolute'}" @click.self="maskClick">
+  <div class="z-mask" :class="{ show }" :style="{position: fixed ? 'fixed' : 'absolute'}" @click.self="maskClick">
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'c-mask',
+  name: 'z-mask',
   props: {
     fixed: {
       type: Boolean,
@@ -47,17 +47,17 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
   @import "../style/config";
-  .c-mask {
+  .z-mask {
     @include size(100%);
     @include center();
     min-width: $min-width;
     background: rgba(#000, .4);
-    transition: opacity .3s;
+    transition: all .3s;
     opacity: 0;
-    pointer-events: none;
+    visibility: hidden;
     &.show {
       opacity: 1;
-      pointer-events: initial;
+      visibility: visible;
     }
   }
 </style>

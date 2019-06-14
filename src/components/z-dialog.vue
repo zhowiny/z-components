@@ -1,30 +1,30 @@
 <template>
-  <c-mask :value="value" @maskClose="close" :fixed="fixed" :maskClose="maskClose">
-    <div class="c-dialog">
-      <c-icon name="icon-close" class="icon" @click="showDialog = false"/>
-      <h2 class="c-dialog_title">
+  <z-mask :value="value" @maskClose="close" :fixed="fixed" :maskClose="maskClose">
+    <div class="z-dialog">
+      <z-icon name="icon-close" class="icon" @click="showDialog = false"/>
+      <h2 class="z-dialog_title">
         <slot name="title">{{ title || 'title' }}</slot>
       </h2>
-      <div class="c-dialog_content">
+      <div class="z-dialog_content">
         <slot>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque facere, itaque? Alias beatae cumque dignissimos fuga ipsa natus placeat, quidem tenetur unde velit. Dolore doloribus esse, laboriosam maiores quam sit.</slot>
       </div>
-      <div class="c-dialog_footer">
+      <div class="z-dialog_footer">
         <slot name="footer">
-          <c-button type="primary">确定</c-button>
-          <c-button>取消</c-button>
+          <z-button type="primary">确定</z-button>
+          <z-button>取消</z-button>
         </slot>
       </div>
     </div>
-  </c-mask>
+  </z-mask>
 </template>
 
 <script>
-import cIcon from './c-icon'
-import cMask from './c-mask'
-import cButton from './c-button'
+import zIcon from './z-icon'
+import zMask from './z-mask'
+import zButton from './z-button'
 
 export default {
-  name: 'c-dialog',
+  name: 'z-dialog',
   props: {
     title: String,
     fixed: {
@@ -62,16 +62,16 @@ export default {
     },
   },
   components: {
-    cIcon,
-    cMask,
-    cButton,
+    zIcon,
+    zMask,
+    zButton,
   },
 }
 </script>
 
 <style scoped lang='scss'>
   @import "../style/config";
-  .c-dialog {
+  .z-dialog {
     @include center();
     top: 45%;
     min-width: 40%;
