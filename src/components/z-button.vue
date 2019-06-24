@@ -11,7 +11,7 @@
         'is-round': round,
       }
     ]"
-    @click="handleClick"
+    v-on="$listeners"
   >
     <slot>button</slot>
   </button>
@@ -30,9 +30,6 @@ export default {
     round: Boolean,
   },
   methods: {
-    handleClick (e) {
-      this.$emit('click', e)
-    }
   }
 }
 </script>

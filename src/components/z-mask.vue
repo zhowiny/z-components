@@ -1,5 +1,5 @@
 <template>
-  <div class="z-mask" :class="{ show }" :style="{position: fixed ? 'fixed' : 'absolute'}">
+  <div class="z-mask" :class="{ show }" @transitionend="transitionend" :style="{position: fixed ? 'fixed' : 'absolute'}">
     <div class="z-mask--container" :style="{position: fixed ? 'fixed' : 'absolute'}" @click.self="maskClick">
     </div>
     <slot></slot>
@@ -33,6 +33,11 @@ export default {
       this.show = val
     },
     show: function (val) {
+      if (val) {
+        document.body.style.overflow = 'hidden'
+      } else {
+        document.body.style.overflow = 'auto'
+      }
       this.$emit('input', val)
     }
   },
@@ -40,6 +45,11 @@ export default {
     maskClick () {
       this.maskClose && this.$emit('maskClose')
     },
+    transitionend (e) {
+      if (e.propertyName === 'visibility') {
+
+      }
+    }
   },
   components: {
   },

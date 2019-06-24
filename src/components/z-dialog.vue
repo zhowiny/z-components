@@ -10,8 +10,8 @@
       </div>
       <div class="z-dialog_footer">
         <slot name="footer">
-          <z-button type="primary">确定</z-button>
-          <z-button @cick="cancel">取消</z-button>
+          <z-button type="primary" @click="confirm">确定</z-button>
+          <z-button @click="cancel">取消</z-button>
         </slot>
       </div>
     </div>

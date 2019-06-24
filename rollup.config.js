@@ -1,7 +1,6 @@
 import babel from 'rollup-plugin-babel'
 import commonjs from 'rollup-plugin-commonjs'
 import nodeResolve from 'rollup-plugin-node-resolve'
-// import scssPlugin from 'rollup-plugin-scss'
 import vue from 'rollup-plugin-vue'
 import createBanner from 'create-banner'
 import pkg from './package.json'
@@ -55,7 +54,6 @@ export default {
   plugins: [
     nodeResolve(),
     commonjs(),
-    // scssPlugin(),
     vue({
       template: {
         isProduction: true,
