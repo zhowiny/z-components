@@ -1,0 +1,44 @@
+$zue-prefix: z-;
+// colors
+$bg: #F3F4F5;
+$bg-dark: #4c4c4c !default;
+$text-color: lighten(#000, 25%);
+$text-color-dark: darken(#fff, 15%);
+
+$primary: #68bdb5 !default;
+$primary-dark: darken($primary, 25%) !default;
+$primary-light: lighten($primary, 24%) !default;
+
+$success: #8bc34a !default;
+$error: #f44336 !default;
+$info: #00bcd4 !default;
+$warning: #ff9800 !default;
+
+$dark: #121212 !default;
+$dark-light: #1d1d1d !default;
+
+// font
+$font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-size: 14px !default;
+$line-height: 1.5 !default;
+$line-height-min: 1.12 !default;
+
+// space
+$space-base: 16px !default;
+$border-radius: 4px !default;
+
+// shadow
+$shadow-color: #000 !default;
+$shadow: 0 3px 5px -1px rgba($shadow-color, .2), 0 5px 8px rgba($shadow-color, .14), 0 1px 14px rgba($shadow-color, .12) !default;
+$inset-shadow: 0 7px 9px -7px rgba($shadow-color, .7) inset !default;
+$shadow-transition: box-shadow .28s cubic-bezier(.4, 0, .2, 1) !default;
+
+// transition
+$hover-transition: .3s cubic-bezier(.25, .8, .5, 1) !default;
+
+// button
+$button-padding: 4px 16px !default;
+$button-padding-small: .285em;
+$button-border-radius : 3px !default;
